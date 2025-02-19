@@ -4,7 +4,17 @@
 <div class="container">
   <h1 class="mt-3">Movie Favourites - Oleksandr Demkiv - S00251154</h1>
   <app-add-movie/>
-  <app-list-movies/>
+</div>
+
+<div class="container p-0">
+  <div class="row">
+    <div class="col-sm-6">
+      <app-list-movies (onSelectedMovie)="setSelectedMovie($event)"/>
+    </div>
+    <div class="col-sm-6">
+      <app-movie-detail [movieDetails]="mySelectedMovie"/>
+    </div>
+  </div>
 </div>
 
 <router-outlet/>

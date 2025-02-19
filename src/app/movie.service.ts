@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
+import { Movie } from './movie.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
 
-  constructor() { }
-
   moviesList = [
-    { title: 'The Shawshank Redemption', year: '1994', director: 'Frank Darabont' },
-    { title: 'The Godfather', year: '1972', director: 'Francis Ford Coppola' },
-    { title: 'The Dark Knight', year: '2008', director: 'Christopher Nolan' },
-    { title: 'The Lord of the Rings: The Return of the King', year: '2003', director: 'Peter Jackson' },
+    new Movie ('The Shawshank Redemption', '1994', 'Frank Darabont'),
+    new Movie ('The Godfather', '1972', 'Francis Ford Coppola'),
+    new Movie ('The Dark Knight', '2008', 'Christopher Nolan'),
+    new Movie ('The Lord of the Rings: The Return of the King', '2003', 'Peter Jackson'),
   ]
 
   getMovies() {
